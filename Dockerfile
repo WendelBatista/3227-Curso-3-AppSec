@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     python3 \
     make \
     g++ \
+    apt-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Copia o script wait-for-it.sh
