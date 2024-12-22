@@ -5,6 +5,7 @@ WORKDIR /app
 
 # Instala dependências do sistema para compilar pacotes nativos
 RUN apt-get update && apt-get install -y \
+    dos2unix \
     python3 \
     make \
     g++ \
