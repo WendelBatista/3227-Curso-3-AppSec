@@ -38,7 +38,7 @@ services:
       - ./population.sql:/docker-entrypoint-initdb.d/population.sql
     restart: on-failure
     #command: sh -c "sleep 50 && apt-get update > /dev/null && apt-get install -y apt-utils > /dev/null && apt-get install -y default-mysql-client > /dev/null && mysql -uroot -p12345 -h db < /docker-entrypoint-initdb.d/population.sql && sleep 5"
-    command: sh -c "export DEBIAN_FRONTEND=noninteractive && sleep 50 && apt-get update > /dev/null && apt-get install -y apt-utils > /dev/null && apt-get install -y default-mysql-client > /dev/null && mysql -uroot -p12345 -h db < /docker-entrypoint-initdb.d/population.sql && sleep 5"
+    command: sh -c "export DEBIAN_FRONTEND=noninteractive && sleep 50 && apt-get update > /dev/null && apt-get install -y apt-utils > /dev/null && apt-get install -y default-mysql-client > /dev/null && mysql -uroot -p12345 -h db --ssl-mode=DISABLED < /docker-entrypoint-initdb.d/population.sql && sleep 5"
     networks:
       - my-networks
 
