@@ -31,7 +31,7 @@ services:
       - my-networks
 
   seed:
-    build: .
+    build:
       context: .
       dockerfile: Dockerfile.seed
     depends_on:
