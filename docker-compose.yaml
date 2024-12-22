@@ -32,6 +32,8 @@ services:
 
   seed:
     build: .
+      context: .
+      dockerfile: Dockerfile.seed
     depends_on:
       - db
     volumes:
